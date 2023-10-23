@@ -1,0 +1,46 @@
+﻿@model Estagiei.Models.DAL.tbUser
+
+@{
+    ViewBag.Title = "DeleteEmployee";
+}
+
+<section class="delete">
+    <h3>A ação não poderá ser desfeita. Deseja continuar?</h3>
+    <div>
+        @using (Html.BeginForm("DeleteUser", "User", FormMethod.Post))
+        {
+            @Html.HiddenFor(e => e.userId)
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.userName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.userName)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.userDocument)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.userDocument)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.userEmail)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.userEmail)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.userPhone)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.userPhone)
+                </dd>
+            </dl>
+            <div class="btn-delete">
+                <a href="@Url.Action("Index", "Home")" class="btn btn-green">Voltar</a>
+                <input type="submit" value="Confirmar exclusão" class="btn btn-blue" />
+            </div>
+           
+        }
+    </div>
+</section>

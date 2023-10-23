@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Estagiei.Models.DAL.tbUser>
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.userName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userDocument)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userPhone)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.userName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userDocument)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userPhone)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { userId = item.userId, @class = "btn btn-danger" }) | 
+                @Html.ActionLink("Deletar", "Delete", new { userId = item.userId })
+            </td>
+        </tr>
+    }
+</table>

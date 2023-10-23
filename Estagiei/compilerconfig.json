@@ -1,0 +1,8 @@
+[
+  {
+    "outputFile": "assets/css/theme.css",
+    "inputFile": "assets/css/theme.less",
+    "sourceMap": false,
+    "useNodeSass": false
+  }
+]

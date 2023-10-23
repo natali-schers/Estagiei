@@ -1,0 +1,47 @@
+﻿@model Estagiei.Models.DAL.tbUser
+@{
+    ViewBag.Title = "EditEmployee";
+}
+
+<section class="edit">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.userId)
+        <div class="form-group col-md-6">
+            @Html.LabelFor(model => model.userName)
+            @Html.EditorFor(model => model.userName)
+            @Html.ValidationMessageFor(model => model.userName)
+        </div>
+
+        <div class="form-group col-md-6">
+            @Html.LabelFor(model => model.userDocument)
+            @Html.EditorFor(model => model.userDocument)
+            @Html.ValidationMessageFor(model => model.userDocument)
+        </div>
+
+        <div class="form-group col-md-6">
+            @Html.LabelFor(model => model.userEmail)
+            @Html.EditorFor(model => model.userEmail)
+            @Html.ValidationMessageFor(model => model.userEmail)
+        </div>
+
+        <div class="form-group col-md-6">
+            @Html.LabelFor(model => model.userPhone)
+            @Html.EditorFor(model => model.userPhone)
+            @Html.ValidationMessageFor(model => model.userPhone)
+        </div>
+
+        <div class="btn-edit">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-green">Voltar</a>
+            <input type="submit" value="Salvar" class="btn btn-blue" />
+        </div>
+    </div>
+    }
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
