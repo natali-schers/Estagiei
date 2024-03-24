@@ -1,0 +1,26 @@
+﻿@model List<Estagiei.Models.Usuario>
+@{
+    ViewBag.Title = "View";
+}
+
+<table class="users">
+    @foreach (var usuario in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => usuario.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(model => usuario.documento)
+            </td>
+            <td>
+                @Html.DisplayFor(model => usuario.email)
+            </td>
+            <td>
+                @Html.DisplayFor(model => usuario.telefone)
+            </td>
+        </tr>
+    }
+</table>
+
+<a href="@Url.Action("Register", "Home")" class="btn btn-green">Cadastrar</a>
