@@ -36,5 +36,17 @@ namespace Estagiei.Controllers
                 return View("Index", "Home");
             }
         }
+
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Cadastro()
+        {
+            return View();
+        }
     }
 }

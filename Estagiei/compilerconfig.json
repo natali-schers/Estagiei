@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "assets/css/theme.css",
+    "inputFile": "assets/css/theme.less"
+  },
+  {
+    "outputFile": "assets/css/theme_config.css",
+    "inputFile": "assets/css/theme_config.less"
+  }
+]

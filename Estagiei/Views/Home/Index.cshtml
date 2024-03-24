@@ -1,31 +1,49 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Home";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<section class="home">
+    <div class="row home-container-top">
+        <div class="col-md-8 col-sm-12 col-xs-12">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor at ullamcorper vehicula, lorem lectus eleifend dolor, vel consequat est magna non sem. Quisque diam risus, tristique ut ex at, mattis eleifend elit. Aliquam tempus justo quis justo posuere volutpat. Nulla ultricies diam lectus, at ultrices justo vehicula in. In laoreet, libero eu condimentum maximus, augue urna aliquet leo, et pulvinar mauris diam a dolor. Vestibulum id diam lacinia, ornare mi a, mollis erat. Nunc sagittis laoreet nisl eget ornare. Vivamus non dui vel risus sagittis tempus. Phasellus interdum elit ac nunc eleifend cursus.
+            </p>
+            <a href="@Url.Action("Cadastro", "Usuario")" class="btn btn-purple">Fazer cadastro</a>
+            <a href="@Url.Action("Login", "Usuario")" class="btn btn-orange">Fazer login</a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12 text-center">
+            <img src="~/assets/images/home-top.png" />
+        </div>
+    </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class="jumbotron">
+        <h2 class="text-center">Lorem ipsum dolor sit amet</h2>
+        <div class="teste">
+            <p class="col-md-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor at ullamcorper vehicula, lorem lectus eleifend dolor, vel consequat est magna non.
+            </p>
+            <p class="col-md-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor at ullamcorper vehicula, lorem lectus eleifend dolor, vel consequat est magna non.
+            </p>
+            <p class="col-md-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor at ullamcorper vehicula, lorem lectus eleifend dolor, vel consequat est magna non.
+            </p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+
+    <div class="row home-container-bottom">
+        <div class="col-md-4 col-sm-12 col-xs-12 text-center">
+            <img src="~/assets/images/home-bottom.png" />
+        </div>
+
+        <div class="col-md-8 col-sm-12 col-xs-12">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris condimentum, dolor at ullamcorper vehicula, lorem lectus eleifend dolor, vel consequat est magna non sem. Quisque diam risus, tristique ut ex at, mattis eleifend elit. Aliquam tempus justo quis justo posuere volutpat. Nulla ultricies diam lectus, at ultrices justo vehicula in. In laoreet, libero eu condimentum maximus, augue urna aliquet leo, et pulvinar mauris diam a dolor. Vestibulum id diam lacinia, ornare mi a, mollis erat. Nunc sagittis laoreet nisl eget ornare. Vivamus non dui vel risus sagittis tempus. Phasellus interdum elit ac nunc eleifend cursus.
+            </p>
+            <button class="btn btn-green">Entre em contato</button>
+            <button class="btn btn-blue">Perguntas frequentes</button>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</section>

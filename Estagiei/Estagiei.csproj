@@ -144,6 +144,20 @@
     <Compile Include="Services\UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\theme.css">
+      <DependentUpon>theme.less</DependentUpon>
+    </Content>
+    <Content Include="assets\css\theme.min.css">
+      <DependentUpon>theme.css</DependentUpon>
+    </Content>
+    <Content Include="assets\css\theme_config.css">
+      <DependentUpon>theme_config.less</DependentUpon>
+    </Content>
+    <Content Include="assets\css\theme_config.min.css">
+      <DependentUpon>theme_config.css</DependentUpon>
+    </Content>
+    <Content Include="assets\images\home-bottom.png" />
+    <Content Include="assets\images\home-top.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -160,6 +174,12 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Models\Generated\PetaPoco.Generator.ttinclude" />
     <Content Include="Models\Generated\PetaPoco.Core.ttinclude" />
+    <Content Include="assets\css\theme.less" />
+    <Content Include="assets\css\theme_config.less" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -190,6 +210,10 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Usuario\Login.cshtml" />
+    <Content Include="Views\Usuario\Cadastro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

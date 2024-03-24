@@ -1,0 +1,434 @@
+﻿@import "theme_config.less";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/*#region Estilização Genérica*/
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: unset;
+    height: 100%;
+    padding-top: unset !important;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: unset !important;
+}
+
+a, a:is(:hover, :focus, :active) {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input, select, textarea {
+    max-width: unset !important;
+}
+
+.form-group {
+    margin-left: unset !important;
+    margin-right: unset !important;
+
+    input {
+        height: 30px;
+    }
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 61vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after,
+.row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical > .btn-group:before, 
+.btn-group-vertical > .btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before,
+.navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after {
+    content: unset !important;
+}
+/*#endregion Estilização Genérica*/
+
+/*#region Botões*/
+.btn, .btn:is(:hover, :focus, :active) {
+    color: #FFFFFF;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    min-width: 180px;
+    text-align: center;
+    font-weight: 500;
+    padding: 8px 12px 6px;
+}
+
+.btn-purple {
+    background-color: #420076;
+    border-color: #420076;
+}
+
+.btn-purple:is(:hover, :focus, :active) {
+    background-color: #300055;
+    border-color: #300055;
+}
+
+.btn-orange {
+    background-color: #FF3D00;
+    border-color: #FF3D00;
+}
+
+.btn-orange:is(:hover, :focus, :active) {
+    background-color: #CD3403;
+    border-color: #CD3403;
+}
+
+.btn-green {
+    background-color: #329D64;
+    border-color: #329D64;
+}
+
+.btn-green:is(:hover, :focus, :active) {
+    background-color: #2B8555;
+    border-color: #2B8555;
+}
+
+.btn-blue {
+    background-color: #168FFF;
+    border-color: #168FFF;
+}
+
+.btn-blue:is(:hover, :focus, :active) {
+    background-color: #1576CF;
+    border-color: #1576CF;
+}
+
+@media (max-width: 992px) {
+    .btn {
+        width: 100%;
+    }
+}
+/*#endregion Botões*/
+
+/*#region Header*/
+header {
+    background-color: @mainColor;
+
+    .header {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #FFFFFF;
+
+        .welcome {
+            display: flex;
+            flex-direction: column;
+            width: 163px;
+        }
+
+        a, a:is(:hover, :focus, :active) {
+            color: #FFFFFF;
+        }
+
+        h1 {
+            text-transform: uppercase;
+        }
+
+        .social {
+            width: 160px;
+
+            i {
+                font-size: 22px;
+                margin: 0 10px;
+            }
+        }
+    }
+
+    .navbar {
+        border-radius: 0 !important;
+    }
+}
+
+@media (max-width: 575px) {
+    header {
+        .header {
+            justify-content: center !important;
+
+            .social, .welcome {
+                display: none !important;
+            }
+        }
+
+        .navbar-toggle {
+            float: left;
+            margin-left: 15px;
+        }
+
+        .social {
+            display: flex !important;
+
+            a {
+                padding: 10px 0px 10px 15px;
+
+                i {
+                    margin: unset;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    header {
+        .div-nav, .navbar-toggle {
+            display: none !important;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        .div-nav {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+/*#endregion Header*/
+
+/*#region Footer*/
+footer {
+    background-color: @mainColor;
+
+    .footer {
+        min-height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #FFFFFF;
+        margin-top: 30px;
+
+        a, a:is(:hover, :focus, :active) {
+            color: #FFFFFF;
+        }
+
+        h3 {
+            text-transform: uppercase;
+        }
+
+        .footer-left, .footer-right {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 150px;
+        }
+    }
+
+    .credits {
+        background-color: #f8f8f8;
+        color: #7c7c7c;
+        min-height: 30px;
+        display: flex;
+        align-items: center;
+        text-align: end;
+    }
+}
+
+@media (max-width: 575px) {
+    .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+
+        h3 {
+            display: none;
+        }
+    }
+}
+/*#endregion Footer*/
+
+/*#region Home*/
+.home {
+    .jumbotron {
+        margin: 50px 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin-bottom: 20px !important;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 0px;
+        }
+    }
+
+    .home-container-top, .home-container-bottom {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            margin-bottom: 20px !important;
+        }
+
+        p {
+            font-size: 15px;
+            padding-bottom: 15px;
+        }
+
+        img {
+            width: 180px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .home {
+        .jumbotron {
+            p:nth-child(2) {
+                margin: 20px 0;
+            }
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .home-container-top {
+            flex-direction: column;
+        }
+
+        .home-container-bottom {
+            flex-direction: column-reverse;
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        .btn {
+            margin: 5px 0;
+        }
+
+        img {
+            margin-top: 20px;
+        }
+    }
+}
+/*#endregion Home*/
+
+/*#region Cadastro*/
+.register {
+    border-radius: 10px;
+    padding: 25px;
+    background: #f8f8f8;
+    border: 1px solid #e7e7e7;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-register {
+        padding: 20px 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 992px) {
+    .register {
+        .btn-register {
+            display: block;
+
+            a {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+/*#endregion Cadastro*/
+
+/*#region Login*/
+.login {
+    border-radius: 10px;
+    padding: 25px;
+    background: #f8f8f8;
+    border: 1px solid #e7e7e7;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            margin-top: 20px;
+        }
+    }
+}
+/*#endregion Login*/
+
+/*#region Usuário*/
+.edit {
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-edit {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .edit {
+        .btn-edit {
+            a {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+/*#endregion Usuário*/
+
+/*#region Deletar*/
+.delete {
+    h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    dl {
+        width: max-content;
+        margin: auto;
+
+        dt {
+            width: unset;
+        }
+    }
+
+    .btn-delete {
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .delete {
+        .btn-delete {
+            a {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+/*#endregion Deletar*/
